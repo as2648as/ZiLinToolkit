@@ -10,7 +10,10 @@
             Visible = true,
         };
 
+        public readonly static TrayOptionForm TrayOptionForm = new();
+
         private static List<ToolStripItem> TrayMenuItems = [];
+        private static List<ToolStripItem> DefaultItems = [];
 
         public TrayIcon() => Initialize();
     }

@@ -2,8 +2,12 @@
 {
     public class OptionsMenuItem : ToolStripMenuItem
     {
-        public OptionsMenuItem()
+        private TrayIcon TrayIcon { get; set; } = null!;
+
+        public OptionsMenuItem(TrayIcon trayIcon)
         {
+            TrayIcon = trayIcon;
+
             Text = "選項";
 
             Click += Options_Click;
@@ -11,7 +15,7 @@
 
         private void Options_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Clicked");
+            TrayIcon.TrayOptionForm.Show();
         }
     }
 }
