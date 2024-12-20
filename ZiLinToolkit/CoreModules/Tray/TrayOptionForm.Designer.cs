@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            TreeNode treeNode1 = new TreeNode("節點0");
-            TreeNode treeNode2 = new TreeNode("節點1");
-            TreeNode treeNode3 = new TreeNode("節點2");
-            TreeNode treeNode4 = new TreeNode("節點3");
             splitContainer1 = new SplitContainer();
             groupBox1 = new GroupBox();
             treeView1 = new TreeView();
-            contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.SuspendLayout();
@@ -56,7 +50,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Padding = new Padding(5);
+            splitContainer1.Panel2.Padding = new Padding(5, 10, 10, 10);
             splitContainer1.Size = new Size(664, 491);
             splitContainer1.SplitterDistance = 180;
             splitContainer1.TabIndex = 0;
@@ -79,22 +73,8 @@
             treeView1.Location = new Point(10, 26);
             treeView1.Margin = new Padding(5);
             treeView1.Name = "treeView1";
-            treeNode1.Name = "節點0";
-            treeNode1.Text = "節點0";
-            treeNode2.Name = "節點1";
-            treeNode2.Text = "節點1";
-            treeNode3.Name = "節點2";
-            treeNode3.Text = "節點2";
-            treeNode4.Name = "節點3";
-            treeNode4.Text = "節點3";
-            treeView1.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode2, treeNode3, treeNode4 });
             treeView1.Size = new Size(145, 435);
             treeView1.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // TrayOptionForm
             // 
@@ -114,7 +94,6 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private ContextMenuStrip contextMenuStrip1;
         private TreeView treeView1;
         private GroupBox groupBox1;
     }

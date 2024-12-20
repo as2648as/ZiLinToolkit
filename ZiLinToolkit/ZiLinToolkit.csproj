@@ -9,18 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="App\Providers\Tray\MenuItems\**" />
+    <EmbeddedResource Remove="App\Providers\Tray\MenuItems\**" />
+    <None Remove="App\Providers\Tray\MenuItems\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net" Version="1.6.292" />
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="App\Providers\Tray\MenuItems\NewFolder\" />
     <Folder Include="CoreModules\App\Models\Enums\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="App\Tray\Test\TestTreeNode.cs" />
     <Compile Update="CoreModules\Tray\MenuItems\ExitMenuItem.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CoreModules\Tray\TrayOptionForm.Method.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -31,7 +40,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
