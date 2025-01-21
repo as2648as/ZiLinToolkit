@@ -1,4 +1,6 @@
-﻿namespace ZiLinToolkit.Utility.Tray.Plugins.Default
+﻿using Application = System.Windows.Application;
+
+namespace ZiLinToolkit.Utility.Tray.Plugins.Default
 {
     public class DefaultPlugin : BasePlugin
     {
@@ -23,8 +25,7 @@
 
         private static void Exit_ItemClick(object? sender, EventArgs e)
         {
-            Tray.Hidden();
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
     }
 }
