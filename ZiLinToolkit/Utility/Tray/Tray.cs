@@ -65,5 +65,10 @@ namespace ZiLinToolkit.Utility.Tray
             NotifyIcon.BalloonTipText = message;
             NotifyIcon.ShowBalloonTip(timeout);
         }
+
+        public static void Hidden()
+        {
+            NotifyIcon.Visible = false;
+        }
     }
 }

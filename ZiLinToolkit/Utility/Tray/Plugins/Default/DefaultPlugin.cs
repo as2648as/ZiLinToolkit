@@ -5,20 +5,26 @@
         public DefaultPlugin()
         {
             ToolStripItems = [
-                Item_InputLocker,
+                Item_Exit,
             ];
         }
 
-        private static ToolStripItem Item_InputLocker
+        private static ToolStripItem Item_Exit
         {
             get
             {
                 ToolStripMenuItem item = new() { Text = "關閉" };
 
-                item.Click += (sender, e) => System.Windows.Application.Current.Shutdown();
+                item.Click += Exit_ItemClick;
 
                 return item;
             }
+        }
+
+        private static void Exit_ItemClick(object? sender, EventArgs e)
+        {
+            Tray.Hidden();
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
